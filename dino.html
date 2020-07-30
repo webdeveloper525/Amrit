@@ -1,0 +1,121 @@
+<html onclick="jump()">
+
+
+
+<head>
+    <style>
+    
+        html {
+            padding:0;
+            margin:0;
+        }
+    
+        .game{
+            width:500px;
+            height:200px;
+            border:1px solid black;
+            background-color:cyan;
+        }
+        #character {
+            width: 20px;
+            height:50px;
+            background-color: red;
+            position:relative;
+            top: 150px;
+        }
+            .animate{
+                 animation: jump 500ms ;
+            }  
+            
+        
+        @keyframes jump {
+            0%{top: 150px;}
+            30%{top:100px;}
+            70%{top:100px;}
+            100%{top:150px;}
+        }
+        #block {
+            width:20px;
+            height:20px;
+            background-color:purple;
+            position:relative;
+            top: 130px;
+            left:480px;
+            animation:block 1s infinite linear;
+        }
+        @keyframes block{
+            0%{left:480px;}
+            100%{left:-40px;}
+            
+            
+        }
+    </style>
+    
+    <script>
+    
+    
+    
+    
+    
+</script>
+</head>
+
+
+
+
+
+<body>
+    
+    <div class="game">
+        <div id="character"></div>
+        <div id="half"></div>
+        <div id="block"></div>
+    </div>
+   <p>How to play: Click anywhere on the screen to make your player jump. If you touch the purple block, you die.</p>
+    
+    
+    
+</body>
+
+
+
+<script>
+    
+    var character = document.getElementById("character");
+    var block = document.getElementById("block");
+    function jump(){
+        if(character.classList != "animate"){
+            character.classList.add("animate");
+        }
+        
+        setTimeout(function(){
+          character.classList.remove("animate");  
+        },500);
+    }
+    var checkDead = setInterval(function(){
+      var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+        if(blockLeft<16 && blockLeft>0 && characterTop>=130){
+            block.style.animation = "none";
+            block.style.display="none";
+            alert("You died");
+        }
+    },10);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
