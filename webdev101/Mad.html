@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    
+    function mad() {
+       var city= document.getElementById("city").value;
+       var noun= document.getElementById("in").value;
+       var adj = document.getElementById("ad").value;
+       var car = document.getElementById("pl").value;
+       var two = document.getElementById("ve").value;
+       var lol = document.getElementById("ja").value;
+        var bruh = document.getElementById("fi").value;
+        var wah = document.getElementById("go").value;
+        
+        var sentence = " Today, I remembered my dream very thoroughly. I was walking through the streets of " + city + ". That was when I stopped after seeing a " + noun + ". It was very " + adj + ". I continued to explore the streets. Then, I saw a  group of " + car + ",playing " + two + " on top of a building. I continued to walk, when out of the blue, my favorite  singer, " + lol + ", started to chase me! He/she ran as fast as a " + bruh + "! Soon, he/she pounced on me. That was the end of the dream. What a " + wah + " dream!";
+        document.getElementById("madlib").innerHTML = sentence;
+    }
+    
+    
+    
+    </script>
+<style>
+    body {
+        background-color: lime;
+        font-family:cursive;
+        color:darkorange;
+        
+    }
+    
+</style>
+</head>
+<body>
+ <h1>Mad Libs!</h1>
+    <h2>The Dream</h2>
+    <label>City:</label><input id="city"/><br>
+   <label>Noun:</label> <input id="in"/><br>
+    <label>Adjective:</label> <input id="ad"/><br>
+    <label>Plural animal:</label><input id="pl"/><br>
+    <label>Sport:</label><input id= "ve"/><br>
+    <label>Singer:</label><input id= "ja"/><br>
+    <label>Animal:</label><input id= "fi"/><br>
+    <label>Adjective:</label><input id= "go"/>
+    <button onClick="mad()">MAKE YOUR STORY</button>
+    <p id="madlib"></p>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

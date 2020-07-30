@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    
+    <style>
+    
+        body {
+            background-color:black;
+        }
+        
+        #instrument {
+    height: 116px;
+    width: 812px;
+    padding-right: 10px;
+    padding-top: 50px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+    .box {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float:left;
+}
+        #c {
+    background-color: #3e181b;
+    border: 3px solid #db1d2d;
+}
+
+#d {
+    background-color: #422018;
+    border: 3px solid #f0421c;
+}
+
+#e {
+    background-color: #45391b;
+    border: 3px solid #fec02d;
+}
+
+#f {
+    background-color: #193c29;
+    border: 3px solid #20d071;
+}
+
+#g {
+    background-color: #18323e;
+    border: 3px solid #1a9ddb;
+}
+
+#a {
+    background-color: #331f35;
+    border: 3px solid #a13fad;
+} 
+
+#b {
+    background-color: #43293d;
+    border: 3px solid #f26fd4;
+}
+        #c:hover {
+    background-color:#661920;
+    cursor: pointer;
+}
+        #c:active {
+    background-color:#db1d2d;   
+}
+         #d:hover {
+    background-color:#6e2819;
+    cursor: pointer;
+}
+        #d:active {
+    background-color:#f0421c;   
+}
+          #e:hover {
+    background-color:#735b20;
+    cursor: pointer;
+}
+        #e:active {
+    background-color:#fec02d;   
+}
+           #f:hover {
+    background-color:#1b613b;
+    cursor: pointer;
+}
+        #f:active {
+    background-color:#20d071;   
+}
+          #g:hover {
+    background-color:#184d65;
+    cursor: pointer;
+}
+        #g:active {
+    background-color:#1a9ddb;   
+}
+               #a:hover {
+    background-color:#4e2753;
+    cursor: pointer;
+}
+        #a:active {
+    background-color:#a13fad;   
+}
+         #b:hover {
+    background-color:#6f3a62;
+    cursor: pointer;
+}
+        #b:active {
+    background-color:#f26fd4;   
+}
+       
+    </style>
+     
+</head>
+
+
+<body>
+    
+ 
+    
+    <audio id="cAudio">
+        <source src="c_note.mp3" type="audio/mpeg"> 
+    <source src="c_note.ogg" type="audio/ogg"> 
+    <source src="c_note.wav" type="audio/wav"> 
+   
+</audio>  
+
+    <audio id="dAudio">
+        <source src="d_note.mp3" type="audio/mpeg">
+<source src="d_note.ogg" type="audio/ogg"> 
+    <source src="d_note.wav" type="audio/wav"> 
+   </audio>
+     <audio id="eAudio">
+    <source src="e_note.mp3" type="audio/mpeg"> 
+    <source src="e_note.ogg" type="audio/ogg"> 
+    <source src="e_note.wav" type="audio/wav"> 
+   </audio>
+    <audio id="fAudio">
+    <source src="f_note.mp3" type="audio/mpeg"> 
+    <source src="f_note.ogg" type="audio/ogg"> 
+    <source src="f_note.wav" type="audio/wav"> 
+   </audio>
+    <audio id="gAudio">
+    <source src="g_note.mp3" type="audio/mpeg"> 
+    <source src="g_note.ogg" type="audio/ogg"> 
+    <source src="g_note.wav" type="audio/wav"> 
+   </audio>
+    <audio id="aAudio">
+    <source src="a_note.mp3" type="audio/mpeg"> 
+    <source src="a_note.ogg" type="audio/ogg"> 
+    <source src="a_note.wav" type="audio/wav"> 
+   </audio> 
+   <audio id="bAudio">
+    <source src="b_note.mp3" type="audio/mpeg">   
+
+    <source src="b_note.ogg" type="audio/ogg"> 
+    <source src="b_note.wav" type="audio/wav"> 
+   </audio> 
+
+    
+<div id = "instrument">
+    
+    <div style="color:red;text-align:center;font-size:30pt;" id="c"  class="box">C</div>
+    <div style="color:darkorange;text-align:center;font-size:30pt;" id = "d" class="box">D</div>
+    <div id = "e" class="box" style="color:yellow;text-align:center;font-size:30pt;">E</div>
+    <div id = "f" class="box" style="color:darkseagreen;text-align:center;font-size:30pt;">F</div> 
+    <div id = "g" class="box" style="color:cornflowerblue;text-align:center;font-size:30pt;">G</div>  
+    <div id = "a" class="box" style="color:blueviolet;text-align:center;font-size:30pt;">A</div> 
+    <div style="color:rgba(242, 111, 212, 1);text-align:center;font-size:30pt;" id = "b" class="box">B</div> 
+    
+    
+    
+ </div>
+       
+      
+  
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+    
+    
+     var cNote = document.getElementById("cAudio");
+    var dNote = document.getElementById("dAudio");
+    var eNote = document.getElementById("eAudio");
+    var fNote = document.getElementById("fAudio");
+    var gNote = document.getElementById("gAudio");
+    var aNote = document.getElementById("aAudio");
+    var bNote = document.getElementById("bAudio");
+       
+       $('#c').mousedown(function(){
+    cNote.currentTime = 0;
+    cNote.play();
+});
+        $('#d').mousedown(function(){
+    dNote.currentTime = 0;
+    dNote.play();
+});
+     $('#e').mousedown(function(){
+    eNote.currentTime = 0;
+    eNote.play();
+});  
+   
+   $('#f').mousedown(function(){
+    fNote.currentTime = 0;
+    fNote.play();
+});  
+       $('#g').mousedown(function(){
+    gNote.currentTime = 0;
+    gNote.play();
+});  
+   $('#a').mousedown(function(){
+    aNote.currentTime = 0;
+    aNote.play();
+});    
+       $('#b').mousedown(function(){
+    bNote.currentTime = 0;
+    bNote.play();
+}); 
+    </script>
+
+</html>

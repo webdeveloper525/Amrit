@@ -1,0 +1,69 @@
+<html>
+<head>
+    <script>
+        var topCounter = 0;
+        var bottomCounter = 0;
+  
+    function nextTop() {
+          if(topCounter == 3){
+            topCounter = 0;
+        }
+        topCounter = topCounter + 1;
+          var shirts = ["boys/Shirt1.jpg","boys/shirt2.png","boys/shirt3.png","boys/shirt4.jpg"];
+        document.getElementById("first").src = shirts[topCounter];
+      
+    }
+        
+    function nextBottom() {
+         if(bottomCounter == 3){
+            bottomCounter = 0;
+        }
+        bottomCounter = bottomCounter+1;
+       var pants = ["boys/pant1.jpg","boys/pant2.jpg","boys/pant3.jpg","boys/pant4.jpg"];
+        document.getElementById("short").src = pants[bottomCounter];
+            
+         
+        
+       
+    }
+ 
+    </script>
+
+    
+    
+    
+</head>
+
+
+
+<body>
+    <img id = "first" src = "boys/Shirt1.jpg" width= 300px height = 300px>
+    <button onClick = "nextTop()">Click to change shirt!</button><br>
+    <img id = "short" src = "boys/pant1.jpg" width = 300px height = 300px>
+    <button onClick = "nextBottom()">Click to change pant!</button><br>
+    
+    
+    
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
